@@ -1,0 +1,6 @@
+robotframework==4.0.0
+robotframework-camunda
+
+camunda-external-task-client-python3
+rpaframework
+robotframework-seleniumlibrary

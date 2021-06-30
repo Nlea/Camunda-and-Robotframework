@@ -1,0 +1,10 @@
+tasks:
+  Sign Up to the Camunda Forum:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" signUpForum.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
