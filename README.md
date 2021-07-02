@@ -1,13 +1,13 @@
 # Camunda-and-Robot-framework
-This project shows how to integrate [Robot framework (RF)](https://robotframework.org/) with Camunda.
+This project shows how to integrate [Robot framework (RF)](https://robotframework.org/) with [Camunda Platform](https://docs.camunda.org/manual/7.15/).
 
-The project contains a BPMN diagram and the implementation of the service tasks with Robot framework. The service tasks in Camunda are implemented as External Tasks.
+The project contains a BPMN diagram and the implementation of the service tasks with Robot framework. The service tasks in Camunda are implemented as [External Task](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) .
 
 A full list with other projects that integrate Camunda and Robot framework can be found [here](https://github.com/camunda-community-hub/awesome-Camunda-and-Robotframework-projects)
 
 
 ## The process
-Becoming part of the Camunda Community is related with various sign ups. This process automates the sign up for the Camunda Platform Forum and the Camunda Newsletter. At the start  you can decide what you want to register for and provide the details. 
+Becoming part of the Camunda Community is related with various sign ups. This process automates the sign up for the [Camunda Platform Forum](https://forum.camunda.org/) and the [Camunda Community Newsletter](https://camunda.com/developers/developer-community-updates/). At the start  you can decide what you want to register for and provide the details. 
 
 ![Camunda Community Sign up Process](/img/Robotframework-process.png)
 
@@ -17,15 +17,15 @@ After the registration an email is sent to the user to inform them about the new
 ## Robot Framework Tasks
 
 ### Robot framework for User Interface (UI) Automation
-RPA Tools automate User interfaces and therefore can bring together systems that were not designed to interact with each other (for example some systems miss APIs to integrate with others).
+[RPA](https://en.wikipedia.org/wiki/Robotic_process_automation) Tools automate User interfaces and therefore can bring together systems that were not designed to interact with each other (for example some systems miss APIs to integrate with others).
 
 In this example user interface automation is shown at two service tasks implementations. The Service tasks "Signup for community newsletter" and "Signup for forum" uses the [Selinium library](https://robotframework.org/SeleniumLibrary/), which makes it easy to automate browser interactions. 
 
 ### Robot framework beyond UI Automation
-Robot framework is not just about UI Automation. Coming from test automation it provides other functionalities too. Hence a Robot Framework Task can be used beyond UI automation. In this example a RF task [sends an email from a gmail account](https://robocorp.com/docs/development-guide/email/sending-emails-with-gmail-smtp). To send the email the RF task uses the rpaframework library, which is provided by Robocorp. Robocorp provides a Cloud environment to run your Bots. Further it provides a lot of additional open source tooling and libraries for Robot framework.
+Robot framework is not just about UI Automation. Coming from test automation it provides other functionalities too. Hence a Robot Framework Task can be used beyond UI automation. In this example a RF task [sends an email from a gmail account](https://robocorp.com/docs/development-guide/email/sending-emails-with-gmail-smtp). To send the email the RF task uses the [rpaframework library](https://rpaframework.org/), which is provided by Robocorp. Robocorp provides a Cloud environment to run your Bots. Further it provides a lot of additional open source tooling and libraries for Robot framework.
 
-##Architecture
-Robot framework is python based. It is possible to integrate various python libraries into Robot framework files. Therefore it is possible to call Camunda directly from a Robot framework Task. Within the community there is the Robotframework-camunda library, which allows connecting Camunda directly from RF. As RF tasks normally terminate and are not designed to run constantly, there is a gap when it comes to polling. Polling on the other hand is needed for the concept of [External Task](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) within Camunda.
+## Architecture
+Robot framework is python based. It is possible to integrate various python libraries into Robot framework files. Therefore it is possible to call Camunda directly from a Robot framework Task. Within the community there is the [Robotframework-camunda library](https://pypi.org/project/robotframework-camunda/), which allows connecting Camunda directly from RF. As RF tasks normally terminate and are not designed to run constantly, there is a gap when it comes to polling. Polling on the other hand is needed for the concept of [External Task](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) within Camunda.
 
 In this example the three Service tasks implemented in Robot Framework use a different architecture to achieve polling.
 
@@ -177,7 +177,7 @@ Please be aware that you need to have a payment plan where the "triggering proce
 6. Observer your results in Cockpit, the log.hmtl and Robocorp of each RF Worker
 
 ## To do for the project:
-At the moment there is no validation if the forum sign up and the registration for the newsletter have been successful (need to be added)
-Hand back variables to Camunda with [Camunda-external-task-client-python3](## Camunda-external-task-client-python3).
-Error Handling (BPMN Error)
-Implement architecture with Robocorp
+- At the moment there is no validation if the forum sign up and the registration for the newsletter have been successful (need to be added)
+- Hand back variables to Camunda with [Camunda-external-task-client-python3](## Camunda-external-task-client-python3).
+- Error Handling (BPMN Error)
+- Implement architecture with Robocorp
