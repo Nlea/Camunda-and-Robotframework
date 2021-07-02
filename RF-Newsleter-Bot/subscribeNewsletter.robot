@@ -8,16 +8,15 @@ Library    Collections
 
 *** Variables ***
 ${CAMUNDA_HOST}    http://localhost:8080
-${existing_topic}    SignUp
+${existing_topic}    SubscribeToNewsletter
 
 
 
 *** Tasks ***
 Execute Service Task
-    [Documentation]    Camunda Service task to send an Email
+    [Documentation]    Camunda Service task to Subscribe to the Camunda Community Newsletter
 
-
-    ${existing_topic}    Fetch workload    SignUp
+    ${existing_topic}    Fetch workload    SubscribeToNewsletter
     ${recent_task}    Get fetch response
     log    \t${recent_task}
 

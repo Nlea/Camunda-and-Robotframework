@@ -6,7 +6,7 @@ Library           RPA.Browser.Selenium
 *** Variables ***
 ${email}      hello@test.de
 ${username}   test
-${account-name}   default.test
+${name}   default.test
 
 
 *** Tasks ***
@@ -22,7 +22,7 @@ Sign Up to the Camunda Forum
 
     Input Text   id:new-account-email   ${email}
     Input Text   id:new-account-username   ${username}
-    Input Text   id:new-account-name   ${account-name}
+    Input Text   id:new-account-name   ${name}
     Input Text   id:new-account-password   communityRocks!
 
     

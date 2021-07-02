@@ -23,8 +23,8 @@ def handle_task(task: ExternalTask) -> TaskResult:
     variables =[worker_id]
        
     #start RF-task
-    robotOutput = robot.run("signUp.robot", variable=variables)
-    print(robotOutput);     
+    robotOutput = robot.run("subscribeNewsletter.robot", variable=variables)
+       
     
 
-ExternalTaskWorker(worker_id="worker1",config=default_config).subscribe("SignUp", handle_task)
+ExternalTaskWorker(worker_id="worker1",config=default_config).subscribe("SubscribeToNewsletter", handle_task)

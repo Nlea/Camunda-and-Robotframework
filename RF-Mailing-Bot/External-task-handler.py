@@ -10,9 +10,20 @@ def handle_task(task: ExternalTask) -> TaskResult:
     
     # get Variables from the process
     emailAddress = task.get_variable("email")
-    body = task.get_variable("body")
-    subject = task.get_variable("subject")
-    
+    newsletter = task.get_variable("newsletter")
+    forum = task.get_variable("forum")
+    username = task.get_variable("usernameForum")
+    subject = "Welcome to the Camunda Community"
+
+    if(newsletter and not forum):
+        body = "You are signed up for the Camunda Community Newsletter"
+    elif(forum and not newsletter):
+        body = "A Forum account has been created, Your choosen username is: " + username +"Your password is: communityRocks! Make sure to change your password at your first Login."
+    elif(forum and newsletter):
+        body ="You are subscribed to the Camunda Community Newsletter and a Forum account has been created, Your choosen username is: " + username +"Your password is: communityRocks! Make sure to change your password at your first Login."
+    else:
+        body = "You have not signed up for the Forum or the Community Newsletter. You might want to do it later "
+
     # Put variables into a list for the RF-task
     email = 'email:'+ emailAddress
     body = 'body:'+ body
