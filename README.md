@@ -30,7 +30,7 @@ Robot framework is python based. It is possible to integrate various python libr
 In this example the three Service tasks implemented in Robot Framework use a different architecture to achieve polling.
 
 ### Robotframework-camunda library
-![Architecture with Robotframework-camunda library](/img/a1.png)
+![Architecture with Robotframework-camunda library](/img/a2.png)
 
 The "Subscribe to community newsletter" Service task uses mainly the [Robotframework-camunda library](https://pypi.org/project/robotframework-camunda/). Hence, business logic and communication with Camunda happens within the Robotframework Task. The library defines Keywords which can be used within the RF task to connect to Camunda:
 
@@ -94,7 +94,7 @@ Failure and BPMN Error are not available in the Robotframework-Camunda library a
 
 ### Camunda-external-task-client-python3
 
-![Architecture with Robotframework-camunda library](/img/a2.png)
+![Architecture with Robotframework-camunda library](/img/a1.png)
 
 Within this pattern, the Robot framework task does not interact with Camunda. The interaction with Camunda happens within the [Camunda external task client](https://pypi.org/project/camunda-external-task-client-python3/). The external task handler takes care to get variables from the process and converts them into the format that is need to hand them into the RF task. In this example the “Send Mail” Service task uses this pattern.
 
