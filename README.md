@@ -8,9 +8,14 @@ Find a full list of projects that integrate Camunda and RF [here](https://github
 
 ## Table of content
 **[The process](#the-process)**<br>
-**[Robot framework tasks](#robot-framework-tasks)**<br>
-- [UI Automation](#robot-framework-for-user-interface-ui-automation) <br>
-**[Architecture](#architecture)**<br>
+**[Robot framework tasks](#robot-framework-tasks)**
+- [UI Automation](#robot-framework-for-user-interface-ui-automation) 
+- [Deyond UI Automation](#robot-framework-beyond-ui-automation)
+**[## Different Implementation possibilities of Robot Framework in Camunda and their structure
+](#different-implementation-possibilities-of-robot-framework-in-camunda-and-their-structure)**
+- [Robotframework-camunda library](#robotframework-camunda-library)
+- [Camunda-external-task-client-python3](#camunda-external-task-client-python3)
+- [Robocorp](#robocorp)
 **[Run the project](#run-the-project)**<br>
 
 
@@ -34,7 +39,7 @@ In this example, UI automation is shown at two service task implementations. The
 
 Robot framework is not just about UI automation. Coming from test automation, it provides additional functionalities. Hence, a RF task can be used beyond UI automation. In this example, a RF task [sends an email from a Gmail account](https://robocorp.com/docs/development-guide/email/sending-emails-with-gmail-smtp). To send the email, the RF task uses the [rpaframework library](https://rpaframework.org/), which is provided by Robocorp. Robocorp provides a Cloud environment to run your Bots. Additionally, Robocorp provides a signifitant amount of additional open-source tooling and libraries for Robot framework.
 
-## Architecture
+## Different Implementation possibilities of Robot Framework in Camunda and their structure
 
 Robot framework is Python-based. It is possible to integrate various Python libraries into Robot framework files. Therefore, it is possible to call Camunda directly from a Robot framework task. Within the community, the [Robotframework-camunda library](https://pypi.org/project/robotframework-camunda/) allows connecting Camunda directly from RF. As RF tasks normally terminate and are not designed to run constantly, there is a gap in polling. However, polling is needed for the concept of [External Task](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) within Camunda.
 
@@ -105,7 +110,7 @@ Failure and BPMN Error are not available in the RF Camunda library currently. Th
 
 ### Camunda-external-task-client-python3
 
-![Architecture with Robotframework-camunda library](/img/a1.png)
+![Architecture with external-task-client-python3](/img/a1.png)
 
 Within this pattern, the Robot framework task does not interact with Camunda. The interaction with Camunda happens within the [Camunda external task client](https://pypi.org/project/camunda-external-task-client-python3/). The external task handler takes care to get variables from the process and converts them into the format needed to hand them into the RF task. In this example, the **Send Mail** service task uses this pattern:
 
