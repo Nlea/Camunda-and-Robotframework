@@ -7,8 +7,10 @@ This repo contains a BPMN diagram and the implementation of the service tasks wi
 Find a full list of projects that integrate Camunda and RF [here](https://github.com/camunda-community-hub/awesome-Camunda-and-Robotframework-projects).
 
 ## Table of content
-[The process](##The process)
-[Robot framework task](##Robot)
+**[The process](#the-process)**<br>
+**[Robot framework tasks](#robot-framework-tasks)**<br>
+**[Architecture](#architecture)**<br>
+**[Run the project](#run-the-project)**<br>
 
 
 ## The process
