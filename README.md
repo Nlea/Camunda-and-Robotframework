@@ -9,7 +9,7 @@ Find a full list of projects that integrate Camunda and RF [here](https://github
 ## Table of content
 **[The process](#the-process)**<br>
 **[Robot framework tasks](#robot-framework-tasks)**<br>
-***[UI Automation](#robot-framework-for-user-interface-ui-automation) <br>
+- [UI Automation](#robot-framework-for-user-interface-ui-automation) <br>
 **[Architecture](#architecture)**<br>
 **[Run the project](#run-the-project)**<br>
 
