@@ -6,6 +6,11 @@ This repo contains a BPMN diagram and the implementation of the service tasks wi
 
 Find a full list of projects that integrate Camunda and RF [here](https://github.com/camunda-community-hub/awesome-Camunda-and-Robotframework-projects).
 
+## Table of content
+[The process](##The process)
+[Robot framework task](##Robot)
+
+
 ## The process
 
 Joining the Camunda Community is related to various sign ups. This process automates the sign up for the [Camunda Platform Forum](https://forum.camunda.org/) and the [Camunda Community Newsletter](https://camunda.com/developers/developer-community-updates/). From the start, you can decide what you want to register for and provide the details. 
