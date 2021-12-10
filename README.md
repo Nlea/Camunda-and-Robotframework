@@ -1,6 +1,6 @@
 # Camunda-and-Robot-framework
 
-This document demonstrates how to integrate [Robot framework (RF)](https://robotframework.org/) with [Camunda Platform](https://docs.camunda.org/manual/7.15/).
+This project demonstrates how to integrate [Robot framework (RF)](https://robotframework.org/) with [Camunda Platform](https://docs.camunda.org/manual/7.15/).
 
 This document contains a BPMN diagram and the implementation of the service tasks with RF. The service tasks in Camunda are implemented as [External Tasks](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/).
 
