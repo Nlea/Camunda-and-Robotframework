@@ -7,18 +7,16 @@ This repo contains a BPMN diagram and the implementation of the service tasks wi
 Find a full list of projects that integrate Camunda and RF [here](https://github.com/camunda-community-hub/awesome-Camunda-and-Robotframework-projects).
 
 ## Table of content
-**[The process](#the-process)**<br>
-**[Robot framework tasks](#robot-framework-tasks)**
-- [UI Automation](#robot-framework-for-user-interface-ui-automation) 
-- [Deyond UI Automation](#robot-framework-beyond-ui-automation)<br>  
-
-**[Different Implementation possibilities of Robot Framework in Camunda and their structure
+- **[The process](#the-process)**
+- **[Robot framework tasks](#robot-framework-tasks)**
+  - [UI Automation](#robot-framework-for-user-interface-ui-automation) 
+  - [Deyond UI Automation](#robot-framework-beyond-ui-automation)
+- **[Different Implementation possibilities of Robot Framework in Camunda and their structure
 ](#different-implementation-possibilities-of-robot-framework-in-camunda-and-their-structure)**
-- [Robotframework-camunda library](#robotframework-camunda-library)
-- [Camunda-external-task-client-python3](#camunda-external-task-client-python3)
-- [Robocorp](#robocorp) <br>  
-
-**[Run the project](#run-the-project)**<br>
+  - [Robotframework-camunda library](#robotframework-camunda-library)
+  - [Camunda-external-task-client-python3](#camunda-external-task-client-python3)
+  - [Robocorp](#robocorp) 
+- **[Run the project](#run-the-project)**
 
 
 ## The process
