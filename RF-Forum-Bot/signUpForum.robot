@@ -26,6 +26,6 @@ Sign Up to the Camunda Forum
     Input Text   id:new-account-password   communityRocks!
 
     
-    Click Button      //button[@id ="ember130"]
+    Click Button      //button[@class ="btn-large btn-primary btn btn-text ember-view"]
     
 

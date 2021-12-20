@@ -29,20 +29,30 @@ Execute Service Task
 
 
     #Input Data to sign up for Community Newsletter
+    
     Open Available Browser    https://camunda.com/developers/developer-community-updates/
     Title Should Be    Developer Community Updates - Camunda
+    Delete All Cookies
+    Sleep    3s
+    Execute JavaScript    window.scrollTo(0, 50)
+    Mouse Over    class:content-right
+    
 
     
-    Wait Until Element Is Visible   //button[@class="osano-cm-save osano-cm-buttons__button osano-cm-button osano-cm-button--type_save"] 
-    
+    Wait Until Element Is Visible   //button[@class="osano-cm-save osano-cm-buttons__button osano-cm-button osano-cm-button--type_save"]    
     Click Button       //button[@class="osano-cm-save osano-cm-buttons__button osano-cm-button osano-cm-button--type_save"]
 
+    
+    Mouse Over    class:content-right
+    Set Selenium Implicit Wait    30 
+    Wait Until Element Is Visible    //iframe[@id="hs-form-iframe-0"]
+    Select Frame    //iframe[@id="hs-form-iframe-0"]
+    
+    
+   Input Text When Element Is Visible    name:email    ${email}
+   Input Text When Element Is Visible    name:firstname    ${firstname}
+   Input Text When Element Is Visible    name:lastname    ${lastname}
 
-    Wait Until Element Is Visible    tag:iframe
-    Select Frame    tag:iframe
-    Input Text When Element Is Visible    name:email    ${email}
-    Input Text When Element Is Visible    name:firstname    ${firstname}
-    Input Text When Element Is Visible    name:lastname    ${lastname}
 
     Click Element      //*[@class ="hs-button primary large"]
 

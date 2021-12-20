@@ -8,6 +8,7 @@ Find a full list of projects that integrate Camunda and RF [here](https://github
 
 ## Table of content
 - **[The process](#the-process)**
+- **[Run the project](#run-the-project)**
 - **[Robot framework tasks](#robot-framework-tasks)**
   - [UI Automation](#robot-framework-for-user-interface-ui-automation) 
   - [Deyond UI Automation](#robot-framework-beyond-ui-automation)
@@ -16,7 +17,7 @@ Find a full list of projects that integrate Camunda and RF [here](https://github
   - [Robotframework-camunda library](#robotframework-camunda-library)
   - [Camunda-external-task-client-python3](#camunda-external-task-client-python3)
   - [Robocorp](#robocorp) 
-- **[Run the project](#run-the-project)**
+
 
 
 ## The process
@@ -27,7 +28,21 @@ Joining the Camunda Community is related to various sign ups. This process autom
 
 After registration, an email is sent to the user to inform them about the new accounts. The following document provides more detail on the different RF Service Task implementations, and the different architecture they use to integrate with Camunda:
 
+## Run the project
+
+:collision: Please be aware that the Bots that automate UI might fail if the UI has changed.  
+
+1. Start Camunda (you can use [Docker](https://github.com/camunda/docker-camunda-bpm-platform) or [Camundarun](https://docs.camunda.org/manual/7.15/installation/camunda-bpm-run/)).
+2. Deploy the process Diagram to Camunda.
+3. Start a process instance.
+4. Install necessary Python modules for each RF-Worker. Run ```pip install -r install/requirements.txt```.
+5. Make sure to include your credentials `RF-Mailing-Bot/env.py`.
+5. Start the **External-task-handler** or the **Polling-handler** in each RF Worker folder ```python3 External-task-handler.py```.
+6. Observe your results in Cockpit, the log.hmtl, and Robocorp of each RF Worker.
+
 ## Robot framework tasks
+
+This section provides detailed information on the different implementations of Robot Framework used in this project.
 
 ### Robot framework for user interface (UI) automation
 
@@ -183,15 +198,7 @@ To use the Robocorp API, create an API Key. More information and a detailed inst
 Note that you must have a payment plan where the **triggering process** is enabled.
 
 
-## Run the project
 
-1. Start Camunda (you can use [Docker](https://github.com/camunda/docker-camunda-bpm-platform) or [Camundarun](https://docs.camunda.org/manual/7.15/installation/camunda-bpm-run/)).
-2. Deploy the process Diagram to Camunda.
-3. Start a process instance.
-4. Install necessary Python modules for each RF-Worker. Run ```pip install -r install/requirements.txt```.
-5. Make sure to include your credentials `RF-Mailing-Bot/env.py`.
-5. Start the **External-task-handler** or the **Polling-handler** in each RF Worker folder ```python3 External-task-handler.py```.
-6. Observe your results in Cockpit, the log.hmtl, and Robocorp of each RF Worker.
 
 ## To do for the project
 
